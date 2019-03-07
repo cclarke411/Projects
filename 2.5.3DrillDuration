@@ -1,0 +1,4 @@
+SELECT zip_code,MIN(duration)
+FROM trips
+GROUP BY zip_code,duration
+ORDER BY duration ASC

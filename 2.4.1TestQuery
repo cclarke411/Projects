@@ -1,0 +1,3 @@
+SELECT zipcode, AVG(estimated_home_price), MAX(days_on_market)
+FROM recent_sales
+GROUP BY zipcode;

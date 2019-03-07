@@ -1,0 +1,4 @@
+SELECT COUNT(trip_id),zip_code
+FROM trips
+GROUP BY zip_code
+ORDER BY zip_code
