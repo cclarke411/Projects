@@ -1,0 +1,13 @@
+SELECT
+    trips.trip_id,
+    trips.end_station,
+	trips.start_station,
+    stations.lat,
+    stations.long,
+	stations.name
+FROM
+    trips 
+JOIN
+    stations
+ON
+    trips.end_station = stations.name AND trips.start_station = stations.name;

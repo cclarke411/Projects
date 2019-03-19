@@ -1,0 +1,13 @@
+SELECT 
+	trips.start_date AS date,
+	MAX(trips.duration) AS max_trip_dur
+FROM trips
+JOIN
+     weather
+ON 
+	trips.zip_code = weather.zip
+WHERE
+	weather.precipitationin >0
+GROUP BY 1
+ORDER BY max_trip_dur DESC
+LIMIT 3
