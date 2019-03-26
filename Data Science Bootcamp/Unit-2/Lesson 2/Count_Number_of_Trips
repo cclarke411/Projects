@@ -1,0 +1,9 @@
+SELECT 
+   COUNT(*)
+FROM trips
+JOIN 
+   weather
+ON 
+ 	DATE(trips.start_date) = DATE(weather.date)
+WHERE
+     weather.precipitationin > 0
