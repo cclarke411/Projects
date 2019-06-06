@@ -66,7 +66,7 @@ test.loudness = 24
 d = np.sqrt((music.duration - test.duration)**2 + (music.loudness-test.loudness)**2)
 f = d.sort_values()
 pred1 = len((np.where(music.jazz[f.index[1:k]]==1))[0])
-pred2 = len((np.where(music.jazz[f.index[1:k]]==0))[0])
+pred2 = len((np.where(music.jazz[f.index[1:k]]==0))[0])+1
 z = [pred2/k,pred1/k]
 print(z)
 
